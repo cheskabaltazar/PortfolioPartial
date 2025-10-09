@@ -1,57 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="ches.css">
-    <title>Contact Info</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Cheska Cain</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="ches.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
-<style>
-    
-
-     p{
-        font-size: 18px;
-        margin: 15px 0;
-    }
-     a{
-        color: #ffd369;
-        text-decoration: none;
-        font-weight: 500;
-    }
-     a:hover{
-        text-decoration: underline;
-    }
-     i{
-        margin-right: 8px;
-        color: #ffd369;
-    }
-</style>
 <body>
-     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Cheska Cain</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <section class="content">
-    <div class="container text-center">
-    <h2 class="mb-4">Contact Info</h2>
-    <p><i class="bi bi-facebook"></i> Facebook: <a href="https://www.facebook.com/cheska.louise.baltazar">Cheska Louise Baltazar</a></p>
-    <p><i class="bi bi-envelope-fill"></i> Email: <a href="mailto:cheskalouise007@gmail.com">cheskalouise007@gmail.com</a></p>
-    <p><i class="bi bi-instagram"></i> Instagram: <a href="https://www.instagram.com/esiuolsech?igsh=NjEwYjFlaTQ4ZnY0&utm_source=qr">Cheska Louise Baltazar</a></p>
-    <p><i class="bi bi-telephone-fill"></i> Contact Number: +639776779317</p>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Cheska Cain</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav4">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav4">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        </ul>
+      </div>
     </div>
-</section>
-   
+  </nav>
+
+  <main class="content fade-in">
+    <div class="container content-card">
+      <h2 class="text-center mb-3">Contact Me</h2>
+      <p class="text-center text-muted-light">If you’d like to invite me for an interview or project, send me a message below.</p>
+
+      <div class="contact-wrap">
+        <form id="contactForm" onsubmit="sendContactForm(event)" class="p-4" style="border-radius:12px;">
+          <div class="mb-3">
+            <input class="form-control" name="name" type="text" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input class="form-control" name="email" type="email" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" name="message" placeholder="Your Message / Interview Invite" rows="5" required></textarea>
+          </div>
+          <div class="text-center">
+            <button class="btn-theme" type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+      
+      <div class="text-center mt-5 fade-in">
+        <h5 class="mb-3" style="color: var(--accent1);">You can also reach me here:</h5>
+        <p class="text-muted-light mb-1">
+          <i class="bi bi-telephone-fill"></i> <strong>+63 977 677 9317</strong>
+        </p>
+        <p class="text-muted-light mb-1">
+          <i class="bi bi-envelope-fill"></i> 
+          <a href="mailto:cheskalouise007@gmail.com" style="color:var(--accent1)">cheskalouise007@gmail.com</a>
+        </p>
+        <div class="social-links mt-3">
+          <a href="https://www.facebook.com/cheska.louise.baltazar/" target="_blank" class="social-icon">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/esiuolsech/?igsh=NjEwYjFlaTQ4ZnY0&utm_source=qr&fbclid=IwY2xjawNR3ERleHRuA2FlbQIxMABicmlkETFqSlo0dk1ZSWFlS1o4MGFFAR5qEewKCRxv4PtBWjMOnOWGKa8R5APG5R5Q3skOfRWAxU3AhMLVdbQv-ESQTg_aem_VATzEIE-aR69V8CaKRu4_Q" target="_blank" class="social-icon">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init('rbIdumcp4Iz4F9wYY');
+    })();
+  </script>
+
+  <script src="ches.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
